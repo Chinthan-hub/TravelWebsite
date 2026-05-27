@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages - Explore Karnataka</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">Explore Karnataka</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="packages.html" class="active">Packages</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="small-hero" style="background-image: url('https://images.unsplash.com/photo-1493558103817-58b2924bce98?auto=format&fit=crop&w=1350&q=80');">
+    <div>
+        <h1>Travel Packages</h1>
+        <p>Choose from curated journeys designed for every kind of traveler and every season.</p>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Travel Packages</h2>
+    <p class="section-intro">Explore our curated travel packages — each designed for comfort, local experiences, and seamless logistics. Packages are customizable and can be combined to build longer itineraries. Contact us for custom group rates and add-ons.</p>
+    <div class="grid">
+        <div class="card package">
+            <h3>Basic</h3>
+            <p class="price">$499 <span class="price-inr"></span></p>
+            <p>3 Days / 2 Nights</p>
+            <ul>
+                <li>Accommodation in 3-star hotel</li>
+                <li>Breakfast included</li>
+                <li>Local sightseeing tour</li>
+                <li>Airport transfer</li>
+            </ul>
+        </div>
+        <div class="card package">
+            <h3>Standard</h3>
+            <p class="price">$899 <span class="price-inr"></span></p>
+            <p>5 Days / 4 Nights</p>
+            <ul>
+                <li>Accommodation in 4-star hotel</li>
+                <li>All meals included</li>
+                <li>Guided tours and excursions</li>
+                <li>Airport and local transfers</li>
+                <li>Travel insurance</li>
+            </ul>
+        </div>
+        <div class="card package">
+            <h3>Premium</h3>
+            <p class="price">$1499 <span class="price-inr"></span></p>
+            <p>7 Days / 6 Nights</p>
+            <ul>
+                <li>Accommodation in 5-star hotel</li>
+                <li>All meals with premium options</li>
+                <li>Private guided tours</li>
+                <li>All transfers and transportation</li>
+                <li>Travel insurance and concierge service</li>
+                <li>Exclusive experiences</li>
+            </ul>
+        </div>
+        <div class="card package">
+            <h3>Deluxe</h3>
+            <p class="price">$2499 <span class="price-inr"></span></p>
+            <p>10 Days / 9 Nights</p>
+            <ul>
+                <li>Luxury accommodation in 5-star resorts</li>
+                <li>All meals with gourmet dining</li>
+                <li>Private chauffeur and yacht tours</li>
+                <li>Unlimited transfers and VIP services</li>
+                <li>Comprehensive travel insurance</li>
+                <li>Personalized itinerary and VIP experiences</li>
+                <li>Spa treatments and wellness activities</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section about">
+    <h2>Why Choose Our Packages?</h2>
+    <p>At Explore Karnataka, we prioritize your comfort and adventure. Our packages are crafted with care, ensuring:</p>
+    <ul>
+        <li>Expertly planned itineraries</li>
+        <li>Reliable partners and accommodations</li>
+        <li>24/7 customer support</li>
+        <li>Sustainable travel practices</li>
+        <li>Flexible booking options</li>
+    </ul>
+    <p class="section-details">Booking is simple: reserve online, pay a deposit, and complete payment 15 days before departure. Free cancellations are available within 48 hours of booking. For bespoke requests (dietary, accessibility, private guides), email our concierge team and we'll tailor the experience.</p>
+</section>
+
+<section class="section">
+    <h2>Events and Activities</h2>
+    <p>Beyond packages, explore our exciting events and activities designed to enhance your travel experience. From cultural festivals to adventure expeditions, we offer unique opportunities to connect with destinations in meaningful ways.</p>
+    <p class="section-intro">Activities are available as add-ons or standalone experiences. Each event includes expert guidance, safety briefings, necessary equipment, and optional transport from your accommodation. Check dates and availability before booking.</p>
+    <div class="grid">
+        <div class="card">
+            <h3>Cultural Festival Tours</h3>
+            <p>Immerse yourself in local traditions, music, and celebrations. Join guided tours during major festivals around the world.</p>
+        </div>
+        <div class="card">
+            <h3>Adventure Expeditions</h3>
+            <p>Thrilling outdoor activities including hiking, rafting, and wildlife safaris. Perfect for adrenaline seekers.</p>
+        </div>
+        <div class="card">
+            <h3>Wellness Retreats</h3>
+            <p>Relax and rejuvenate with yoga sessions, spa treatments, and mindfulness workshops in serene locations.</p>
+        </div>
+        <div class="card">
+            <h3>Educational Workshops</h3>
+            <p>Learn about history, art, and culture through interactive workshops and expert-led sessions.</p>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    const usdToInrRate = 83.5; // approximate conversion rate
+    document.querySelectorAll('.price').forEach(priceEl => {
+        const usdText = priceEl.textContent.trim().match(/\$(\d+(?:\.\d+)?)/);
+        if (usdText) {
+            const usdValue = parseFloat(usdText[1]);
+            const inrValue = Math.round(usdValue * usdToInrRate);
+            const inrSpan = priceEl.querySelector('.price-inr');
+            if (inrSpan) {
+                inrSpan.textContent = ` (₹${inrValue.toLocaleString('en-IN')} approx)`;
+            }
+        }
+    });
+</script>
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Explore Karnataka</h4>
+            <p>Your gateway to unforgettable travel experiences.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Contact Info</h4>
+            <p>Email: info@exploreworld.com</p>
+            <p>Phone: +1-800-TRAVEL</p>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="#" class="social-icon">f</a>
+                <a href="#" class="social-icon">t</a>
+                <a href="#" class="social-icon">i</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Explore Karnataka. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
